@@ -21,9 +21,15 @@
   align-items: center;
   justify-content: center;
 }
+.horizontal_card_index img {
+  width: 16px;
+  height: 16px;
+  filter: var(--filter-bg);
+  margin-right: 5px;
+}
 .horizontal_card_index p {
   font-weight: 800;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--background-color);
 }
 
@@ -51,7 +57,7 @@
 }
 
 .horizontal_card_overlay_title {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
   margin-top: 20px;
 }
@@ -95,7 +101,7 @@
 
 /* UPCOMING */
 .horizontal_card_index_upc {
-  width: 120px;
+  width: 100px;
   height: 30px;
   position: absolute;
   top: 0;
@@ -109,21 +115,22 @@
 }
 .horizontal_card_index_upc p {
   font-weight: 800;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--background-color);
 }
-.horizontal_card_index_upcoming {
+.horizontal_card_index_top_rated {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.horizontal_card_index_upcoming img {
+.horizontal_card_index_top_rated img {
   width: 20px;
   height: 20px;
   filter: var(--filter-bg);
   margin-right: 15px;
 }
-.horizontal_card_index_upcoming p {
+.horizontal_card_index_top_rated p {
   font-size: 18px;
+  color: var(--background-color);
 }

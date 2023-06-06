@@ -23,7 +23,7 @@
 }
 .cardInfo_header {
   display: flex;
-
+  z-index: 999;
   width: calc(100vw - var(--padding) * 2);
   flex-direction: row;
   align-items: center;
@@ -86,7 +86,7 @@
 .cardInfo_content_img img {
   width: 100%;
   border-radius: var(--border-r);
-  height: 300px;
+  min-height: 300px;
   object-fit: cover;
 }
 
@@ -179,6 +179,115 @@
 }
 .cardInfo_cta img {
   width: 18px;
+  filter: var(--filter-bg);
+}
+
+/* -------------  SEASONS ----------- */
+.cardInfo_seasons_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: calc(var(--margin) * 2);
+}
+
+.cardInfo_seasons_container_content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cardInfo_seasons_container_info {
+  width: 100%;
+  text-align: center;
+}
+.cardInfo_seasons_container_title {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+.cardInfo_seasons_container_subtitle {
+  margin: 5px;
+  color: var(--color-step-500);
+  text-transform: uppercase;
+}
+.cardInfo_seasons_vertical {
+  min-height: 300px;
+  background-color: var(--color-step-200);
+  width: 100%;
+  border-radius: var(--border-r);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.cardInfo_seasons_vertical_img {
+  width: 60%;
+  height: 100%;
+  border-radius: var(--border-r);
+}
+.cardInfo_seasons_vertical_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-r);
+}
+.cardInfo_seasons_vertical_details {
+  padding: var(--padding);
+  width: 40%;
+}
+.cardInfo_seasons_vertical_details_season {
+  font-size: 14px;
+
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--color-step-800);
+}
+.cardInfo_seasons_vertical_details_air_date {
+  font-size: 14px;
+  margin: 0px;
+  text-transform: uppercase;
+}
+.cardInfo_seasons_vertical_details_name {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+.cardInfo_seasons_vertical_details_episodes {
+  font-size: 20px;
+}
+.cardInfo_seasons_vertical_details_overview {
+  color: var(--color-step-800);
+  font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.cardInfo_seasons_vertical_details_cta {
+  width: 100%;
+  height: 35px;
+  background-color: var(--c-p);
+  border-radius: var(--border-r);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--anim-speed) ease-in-out;
+}
+.cardInfo_seasons_vertical_details_cta:hover {
+  background-color: var(--c-s);
+}
+.cardInfo_seasons_vertical_details_cta p {
+  color: var(--background-color);
+}
+.cardInfo_seasons_vertical_details_cta img {
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
   filter: var(--filter-bg);
 }
 /* --------------------------------------------------- */
