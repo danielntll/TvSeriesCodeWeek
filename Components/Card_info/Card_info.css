@@ -1,0 +1,200 @@
+.cardInfo {
+  visibility: hidden;
+  height: 0vh;
+  bottom: 0;
+  width: 100vw;
+  position: fixed;
+  background-color: var(--background-color);
+  box-shadow: 0px -26px 40px 25px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  left: 0;
+  overflow-x: hidden;
+  transition: var(--anim-speed);
+  border-radius: var(--border-r) var(--border-r) 0 0;
+  overflow-y: scroll;
+  z-index: 999;
+}
+/* ------------ HEADER -------------------- */
+.cardInfo_header_sx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.cardInfo_header {
+  display: flex;
+
+  width: calc(100vw - var(--padding) * 2);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 40px;
+  background-color: var(--background-color);
+  border-radius: var(--border-r) var(--border-r) 0 0;
+  padding: var(--padding);
+}
+.cardInfo_header p {
+  margin: 0;
+  margin-left: 15px;
+  font-size: 18px;
+}
+.cardInfo_header_close {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--anim-speed) ease-in-out;
+}
+.cardInfo_header_close:hover {
+  background-color: var(--color-step-200);
+}
+.cardInfo_header_close img {
+  width: 24px;
+  height: 24px;
+}
+.cardInfo_content_info {
+  padding: var(--padding);
+}
+.cardInfo_content_title p {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.cardInfo_header_dx {
+}
+.cardInfo_header_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.cardInfo_header_btn img {
+  width: 28px;
+}
+
+/* ------------- IMG CONTENT ----------- */
+.cardInfo_content_img {
+  margin-top: 72px;
+  width: calc(100% - var(--padding) * 2);
+  padding: 0 var(--padding);
+  border-radius: var(--border-r);
+}
+.cardInfo_content_img img {
+  width: 100%;
+  border-radius: var(--border-r);
+  height: 300px;
+  object-fit: cover;
+}
+
+/* ------------- CONTENT -------------- */
+.cardInfo_content {
+  /* height: 200vh; */
+  padding: var(--padding);
+}
+.cardInfo_content_rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  z-index: 0;
+}
+.cardInfo_content_rating img {
+  width: 28px;
+  height: 28px;
+  filter: var(--filter-p);
+}
+.cardInfo_description {
+  margin-top: calc(var(--margin) * 2);
+}
+
+.cardInfo_cast {
+  margin-top: calc(var(--margin) * 2);
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  display: -webkit-inline-box;
+  gap: 10px;
+  width: 100%;
+}
+
+.cardInfo_cast_actor {
+  padding: var(--padding);
+  width: calc(130px - var(--padding) * 2);
+  height: 200px;
+  border-radius: var(--border-r);
+  background-color: var(--color-step-150);
+  cursor: pointer;
+  transition: all var(--anim-speed) ease-in-out;
+}
+.cardInfo_cast_actor:hover {
+  background-color: var(--color-step-450);
+}
+
+.cardInfo_cast_actor_avatar {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+}
+.cardInfo_cast_actor_avatar img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.cardInfo_cast_actor_info {
+  text-align: center;
+}
+
+.cardInfo_cta_container {
+  margin-top: calc(var(--margin) * 2);
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.cardInfo_cta {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: var(--c-p);
+  border-radius: var(--border-r);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all var(--anim-speed) ease-in-out;
+}
+.cardInfo_cta:hover {
+  background-color: var(--c-s);
+  border-color: var(--c-s);
+}
+.cardInfo_cta p {
+  margin: 0;
+  color: var(--background-color);
+}
+.cardInfo_cta img {
+  width: 18px;
+  filter: var(--filter-bg);
+}
+/* --------------------------------------------------- */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

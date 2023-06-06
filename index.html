@@ -4,9 +4,690 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="./js/app.js"></script>
+    <title>Wonderland</title>
   </head>
   <body>
-    <h1>Ciao Code Week!</h1>
+    <header>
+      <div class="header_sx">
+        <div class="menu_hamburger">
+          <img
+            src="./Assets/icons8-menu-rounded-100-white.png"
+            alt="Header hamburger menu"
+          />
+        </div>
+
+        <div class="overlay_menu">
+          <div class="overlay_menu_header">
+            <div class="overlay_menu_header_avatar">
+              <div class="header_user">
+                <img src="./Assets/icons8-selfies-100-white.png" alt="" />
+              </div>
+              <p>Daniel</p>
+            </div>
+            <div class="closebtn">
+              <img
+                src="./Assets/icons8-close-90-white.png"
+                alt="Close overlay menu button"
+                sizes=""
+                srcset=""
+              />
+            </div>
+          </div>
+          <div class="overlay_content">
+            <div class="overlay_content_btn">
+              <img
+                src="./Assets/icons8-dashboard-90-white.png"
+                alt="Discover btn"
+              />
+              <p>Dashboard</p>
+            </div>
+            <hr />
+            <div class="overlay_content_btn">
+              <img
+                src="./Assets/icons8-radar-90-white.png"
+                alt="Discover btn"
+              />
+              <p>Surprise me</p>
+            </div>
+            <div class="overlay_content_btn">
+              <img
+                src="./Assets/icons8-documentary-90-white.png"
+                alt="Discover btn"
+              />
+              <p>Now Playing</p>
+            </div>
+            <div class="overlay_content_btn">
+              <img
+                src="./Assets/icons8-prize-90-white.png"
+                alt="Discover btn"
+              />
+              <p>Popular</p>
+            </div>
+            <div class="overlay_content_btn">
+              <img
+                src="./Assets/icons8-trophy-90-white.png"
+                alt="Discover btn"
+              />
+              <p>Top Rated</p>
+            </div>
+            <div class="overlay_content_btn">
+              <img
+                src="./Assets/icons8-event-accepted-tentatively-90-white.png"
+                alt="Discover btn"
+              />
+              <p>Upcoming</p>
+            </div>
+            <div class="overlay_content_btn">
+              <img
+                src="./Assets/icons8-history-90-whtie.png"
+                alt="Discover btn"
+              />
+              <p>History</p>
+            </div>
+
+            <hr />
+            <div class="overlay_content_body">
+              <div class="overlay_content_btn">
+                <img
+                  src="./Assets/icons8-list-90-white.png"
+                  alt="Discover btn"
+                />
+                <p>All Genres</p>
+              </div>
+              <div class="overlay_content_btn">
+                <p>Action</p>
+              </div>
+              <div class="overlay_content_btn">
+                <p>Adventure</p>
+              </div>
+              <div class="overlay_content_btn">
+                <p>Animation</p>
+              </div>
+              <div class="overlay_content_btn">
+                <p>Comedy</p>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+
+        <div class="header_logo">
+          <img src="./Assets/logo-esteso.png" alt="Header logo Wonderland" />
+        </div>
+      </div>
+      <div class="header_dx">
+        <div class="header_user">
+          <img src="./Assets/icons8-selfies-100-white.png" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION HEADER -->
+    <div class="homepage_section header">
+      <div class="homepage_section_header">
+        <p class="homepage_section_title">Now playing</p>
+        <div class="homepage_section_header_cta">
+          Explore all
+          <img src="./Assets/icons8-forward-90-white.png" alt="section cta" />
+        </div>
+      </div>
+      <div class="homepage_section_carousel">
+        <div
+          class="hero_card"
+          style="
+            background-image: url('https://image.tmdb.org/t/p/original//qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          "
+        >
+          <div class="hero_card_overlay">
+            <p class="hero_card_title">The Super Mario Bros. Movie</p>
+            <div class="hero_card_rating">
+              <div class="hero_card_rating_stars">
+                <img src="./Assets/icons8-star-90-white.png" alt="" />
+                <p>
+                  <b>7.8</b>
+                </p>
+                <p>/</p>
+                <p>10</p>
+              </div>
+              <div class="hero_card_rating_vote_count">
+                <p>|</p>
+                <p>4173</p>
+                <p>votes</p>
+              </div>
+            </div>
+            <div class="hero_card_genre">
+              <div class="hero_card_genre_title">
+                <p>Animation</p>
+              </div>
+              <div class="hero_card_genre_title_separator">
+                <p>·</p>
+              </div>
+              <div class="hero_card_genre_title">
+                <p>Family</p>
+              </div>
+              <div class="hero_card_genre_title_separator">
+                <p>·</p>
+              </div>
+              <div class="hero_card_genre_title">
+                <p>Adventure</p>
+              </div>
+              <div class="hero_card_genre_title_separator">
+                <p>·</p>
+              </div>
+              <div class="hero_card_genre_title">
+                <p>Adventure</p>
+              </div>
+              <div class="hero_card_genre_title_separator">
+                <p>·</p>
+              </div>
+              <div class="hero_card_genre_title">
+                <p>Adventure</p>
+              </div>
+            </div>
+            <div class="hero_card_cta">
+              <div class="hero_card_cta_btn info" onclick="openCardInfo('')">
+                <p>Open card</p>
+                <img
+                  src="./Assets/icons8-info-90-white.png"
+                  alt="cta button card"
+                />
+              </div>
+              <div class="hero_card_cta_btn trailer">
+                <p>Trailer</p>
+                <img
+                  src="./Assets/icons8-play-90-white.png"
+                  alt="cta button card"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero_card"></div>
+        <div class="hero_card"></div>
+      </div>
+    </div>
+    <!-- SECTION POPULAR -->
+    <div class="homepage_section">
+      <div class="homepage_section_header">
+        <p class="homepage_section_title">Popular</p>
+        <div class="homepage_section_header_cta">
+          Explore all
+          <img src="./Assets/icons8-forward-90-white.png" alt="section cta" />
+        </div>
+      </div>
+      <!-- HORIZONTAL CARD CAROUSEL -->
+      <div class="homepage_section_carousel">
+        <!-- HORIZONTAL CARD -->
+        <div
+          class="horizontal_card"
+          style="
+            background-image: url('https://image.tmdb.org/t/p/original///9n2tJBplPbgR2ca05hS5CKXwP2c.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="horizontal_card_index">
+            <p># 1</p>
+          </div>
+          <div class="horizontal_card_overlay">
+            <p class="horizontal_card_overlay_title">
+              The Super Mario Bros. Movie
+            </p>
+            <div class="horizontal_card_overlay_cta_container">
+              <div
+                class="horizontal_card_overlay_cta"
+                onclick="openCardInfo('')"
+              >
+                <img src="./Assets/icons8-info-90-white.png" alt="" />
+              </div>
+              <div class="horizontal_card_overlay_cta">
+                <img src="./Assets/icons8-play-90-white.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- HORIZONTAL CARD -->
+        <div
+          class="horizontal_card"
+          style="
+            background-image: url('https://image.tmdb.org/t/p/original///9n2tJBplPbgR2ca05hS5CKXwP2c.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="horizontal_card_index">
+            <p># 1</p>
+          </div>
+          <div class="horizontal_card_overlay">
+            <p class="horizontal_card_overlay_title">
+              The Super Mario Bros. Movie
+            </p>
+            <div class="horizontal_card_overlay_cta_container">
+              <div
+                class="horizontal_card_overlay_cta"
+                onclick="openCardInfo('')"
+              >
+                <img src="./Assets/icons8-info-90-white.png" alt="" />
+              </div>
+              <div class="horizontal_card_overlay_cta">
+                <img src="./Assets/icons8-play-90-white.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- HORIZONTAL CARD -->
+        <div
+          class="horizontal_card"
+          style="
+            background-image: url('https://image.tmdb.org/t/p/original///9n2tJBplPbgR2ca05hS5CKXwP2c.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="horizontal_card_index">
+            <p># 1</p>
+          </div>
+          <div class="horizontal_card_overlay">
+            <p class="horizontal_card_overlay_title">
+              The Super Mario Bros. Movie
+            </p>
+            <div class="horizontal_card_overlay_cta_container">
+              <div
+                class="horizontal_card_overlay_cta"
+                onclick="openCardInfo('')"
+              >
+                <img src="./Assets/icons8-info-90-white.png" alt="" />
+              </div>
+              <div class="horizontal_card_overlay_cta">
+                <img src="./Assets/icons8-play-90-white.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION TOP RATED -->
+    <div class="homepage_section">
+      <div class="homepage_section_header">
+        <p class="homepage_section_title">Top Rated</p>
+        <div class="homepage_section_header_cta">
+          Explore all
+          <img src="./Assets/icons8-forward-90-white.png" alt="section cta" />
+        </div>
+      </div>
+      <!-- HORIZONTAL CARD CAROUSEL -->
+      <div class="homepage_section_carousel">
+        <!-- HORIZONTAL CARD -->
+        <div
+          class="horizontal_card"
+          style="
+            background-image: url('https://image.tmdb.org/t/p/original///9n2tJBplPbgR2ca05hS5CKXwP2c.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="horizontal_card_index">
+            <div class="horizontal_card_index_toprated">
+              <img src="./Assets/icons8-star-90-white.png" alt="" />
+              <p>8.8</p>
+            </div>
+          </div>
+          <div class="horizontal_card_overlay">
+            <p class="horizontal_card_overlay_title">
+              The Super Mario Bros. Movie
+            </p>
+            <div class="horizontal_card_overlay_cta_container">
+              <div
+                class="horizontal_card_overlay_cta"
+                onclick="openCardInfo('')"
+              >
+                <img src="./Assets/icons8-info-90-white.png" alt="" />
+              </div>
+              <div class="horizontal_card_overlay_cta">
+                <img src="./Assets/icons8-play-90-white.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- HORIZONTAL CARD -->
+        <div
+          class="horizontal_card"
+          style="
+            background-image: url('https://image.tmdb.org/t/p/original///9n2tJBplPbgR2ca05hS5CKXwP2c.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="horizontal_card_index">
+            <div class="horizontal_card_index_toprated">
+              <img src="./Assets/icons8-star-90-white.png" alt="" />
+              <p>8.8</p>
+            </div>
+          </div>
+          <div class="horizontal_card_overlay">
+            <p class="horizontal_card_overlay_title">
+              The Super Mario Bros. Movie
+            </p>
+            <div class="horizontal_card_overlay_cta_container">
+              <div
+                class="horizontal_card_overlay_cta"
+                onclick="openCardInfo('')"
+              >
+                <img src="./Assets/icons8-info-90-white.png" alt="" />
+              </div>
+              <div class="horizontal_card_overlay_cta">
+                <img src="./Assets/icons8-play-90-white.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- HORIZONTAL CARD -->
+        <div
+          class="horizontal_card"
+          style="
+            background-image: url('https://image.tmdb.org/t/p/original///9n2tJBplPbgR2ca05hS5CKXwP2c.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="horizontal_card_index">
+            <div class="horizontal_card_index_toprated">
+              <img src="./Assets/icons8-star-90-white.png" alt="" />
+              <p>8.8</p>
+            </div>
+          </div>
+          <div class="horizontal_card_overlay">
+            <p class="horizontal_card_overlay_title">
+              The Super Mario Bros. Movie
+            </p>
+            <div class="horizontal_card_overlay_cta_container">
+              <div
+                class="horizontal_card_overlay_cta"
+                onclick="openCardInfo('')"
+              >
+                <img src="./Assets/icons8-info-90-white.png" alt="" />
+              </div>
+              <div class="horizontal_card_overlay_cta">
+                <img src="./Assets/icons8-play-90-white.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION UPCOMING -->
+    <div class="homepage_section">
+      <div class="homepage_section_header">
+        <p class="homepage_section_title">Upcoming</p>
+        <div class="homepage_section_header_cta">
+          Explore all
+          <img src="./Assets/icons8-forward-90-white.png" alt="section cta" />
+        </div>
+      </div>
+      <div class="homepage_section_carousel">
+        <div
+          class="hero_card"
+          style="
+            background-image: url('https://image.tmdb.org/t/p/original//8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          "
+        >
+          <div class="horizontal_card_index_upc">
+            <div class="horizontal_card_index_upcoming">
+              <img
+                src="./Assets/icons8-event-accepted-tentatively-90-white.png"
+                alt=""
+              />
+              <p>31/05</p>
+            </div>
+          </div>
+          <div class="hero_card_overlay">
+            <p class="hero_card_title margin-top">
+              The Super Mario Bros. Movie
+            </p>
+            <div class="hero_card_rating">
+              <div class="hero_card_rating_stars">
+                <img src="./Assets/icons8-star-90-white.png" alt="" />
+                <p>
+                  <b>7.8</b>
+                </p>
+                <p>/</p>
+                <p>10</p>
+              </div>
+              <div class="hero_card_rating_vote_count">
+                <p>|</p>
+                <p>4173</p>
+                <p>votes</p>
+              </div>
+            </div>
+            <div class="hero_card_genre">
+              <div class="hero_card_genre_title">
+                <p>Animation</p>
+              </div>
+              <div class="hero_card_genre_title_separator">
+                <p>·</p>
+              </div>
+              <div class="hero_card_genre_title">
+                <p>Family</p>
+              </div>
+              <div class="hero_card_genre_title_separator">
+                <p>·</p>
+              </div>
+              <div class="hero_card_genre_title">
+                <p>Adventure</p>
+              </div>
+              <div class="hero_card_genre_title_separator">
+                <p>·</p>
+              </div>
+              <div class="hero_card_genre_title">
+                <p>Adventure</p>
+              </div>
+              <div class="hero_card_genre_title_separator">
+                <p>·</p>
+              </div>
+              <div class="hero_card_genre_title">
+                <p>Adventure</p>
+              </div>
+            </div>
+            <div class="hero_card_cta">
+              <div class="hero_card_cta_btn info" onclick="openCardInfo('')">
+                <p>Open card</p>
+                <img
+                  src="./Assets/icons8-info-90-white.png"
+                  alt="cta button card"
+                />
+              </div>
+              <div class="hero_card_cta_btn trailer">
+                <p>Trailer</p>
+                <img
+                  src="./Assets/icons8-play-90-white.png"
+                  alt="cta button card"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero_card"></div>
+        <div class="hero_card"></div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------- -->
+    <div class="cardInfo" id="cardInfo">
+      <!-- HEADER -->
+      <div class="cardInfo_header">
+        <div class="cardInfo_header_sx">
+          <div class="cardInfo_header_close" onclick="closeCardInfo('')">
+            <img
+              src="./Assets/icons8-close-90-white.png"
+              alt="cardInfo close img"
+            />
+          </div>
+          <p>Details</p>
+        </div>
+        <div class="cardInfo_header_dx">
+          <div class="cardInfo_header_btn">
+            All informations
+            <img
+              src="./Assets/icons8-forward-90-white.png"
+              alt=" open page btn"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- IMG -->
+      <div class="cardInfo_content_img">
+        <img
+          src="https://image.tmdb.org/t/p/original//9n2tJBplPbgR2ca05hS5CKXwP2c.jpg"
+          alt=""
+        />
+      </div>
+
+      <!-- INFO CONTENT -->
+      <div class="cardInfo_content">
+        <!-- TITLE -->
+        <div class="cardInfo_content_title">
+          <p>The Super Mario Bros. Movie</p>
+        </div>
+        <!-- RATING -->
+        <div class="cardInfo_content_rating">
+          <img src="./Assets/icons8-star-90-white.png" alt="" />
+          <p>
+            <b> 7.6 </b>
+            / 10
+          </p>
+          <p>|</p>
+          <p>4444</p>
+        </div>
+        <!-- GENRE -->
+        <div class="hero_card_genre">
+          <div class="hero_card_genre_title">
+            <p>Animation</p>
+          </div>
+          <div class="hero_card_genre_title_separator">
+            <p>·</p>
+          </div>
+          <div class="hero_card_genre_title">
+            <p>Animation</p>
+          </div>
+          <div class="hero_card_genre_title_separator">
+            <p>·</p>
+          </div>
+          <div class="hero_card_genre_title">
+            <p>Animation</p>
+          </div>
+          <div class="hero_card_genre_title_separator">
+            <p>·</p>
+          </div>
+          <div class="hero_card_genre_title">
+            <p>Animation</p>
+          </div>
+          <div class="hero_card_genre_title_separator">
+            <p>·</p>
+          </div>
+          <div class="hero_card_genre_title">
+            <p>Animation</p>
+          </div>
+          <div class="hero_card_genre_title_separator">
+            <p>·</p>
+          </div>
+          <div class="hero_card_genre_title">
+            <p>Animation</p>
+          </div>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="cardInfo_description">
+          <p>
+            While working underground to fix a water main, Brooklyn plumbers—and
+            brothers—Mario and Luigi are transported down a mysterious pipe and
+            wander into a magical new world. But when the brothers are
+            separated, Mario embarks on an epic quest to find Luigi.
+          </p>
+        </div>
+        <!-- CTA -->
+        <div class="cardInfo_cta_container">
+          <div class="cardInfo_cta">
+            <img src="./Assets/icons8-play-90-white.png" alt="web movie img" />
+            <p>trailer</p>
+          </div>
+          <div class="cardInfo_cta">
+            <img
+              src="./Assets/icons8-website-90-white.png"
+              alt="web movie img"
+            />
+            <p>official website</p>
+          </div>
+        </div>
+        <!-- CASTING -->
+        <div class="cardInfo_cast">
+          <div class="cardInfo_cast_actor">
+            <div class="cardInfo_cast_actor_avatar">
+              <img
+                src="https://image.tmdb.org/t/p/original//83o3koL82jt30EJ0rz4Bnzrt2dd.jpg"
+                alt="avatar cast"
+              />
+            </div>
+            <div class="cardInfo_cast_actor_info">
+              <p>Chris Pratt</p>
+              <p><b>Mario (voice)</b></p>
+              <p><i>Acting</i></p>
+            </div>
+          </div>
+          <div class="cardInfo_cast_actor">
+            <div class="cardInfo_cast_actor_avatar">
+              <img
+                src="https://image.tmdb.org/t/p/original//83o3koL82jt30EJ0rz4Bnzrt2dd.jpg"
+                alt="avatar cast"
+              />
+            </div>
+            <div class="cardInfo_cast_actor_info">
+              <p>Chris Pratt</p>
+              <p><b>Mario (voice)</b></p>
+              <p><i>Acting</i></p>
+            </div>
+          </div>
+          <div class="cardInfo_cast_actor">
+            <div class="cardInfo_cast_actor_avatar">
+              <img
+                src="https://image.tmdb.org/t/p/original//83o3koL82jt30EJ0rz4Bnzrt2dd.jpg"
+                alt="avatar cast"
+              />
+            </div>
+            <div class="cardInfo_cast_actor_info">
+              <p>Chris Pratt</p>
+              <p><b>Mario (voice)</b></p>
+              <p><i>Acting</i></p>
+            </div>
+          </div>
+          <div class="cardInfo_cast_actor">
+            <div class="cardInfo_cast_actor_avatar">
+              <img
+                src="https://image.tmdb.org/t/p/original//83o3koL82jt30EJ0rz4Bnzrt2dd.jpg"
+                alt="avatar cast"
+              />
+            </div>
+            <div class="cardInfo_cast_actor_info">
+              <p>Chris Pratt</p>
+              <p><b>Mario (voice)</b></p>
+              <p><i>Acting</i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

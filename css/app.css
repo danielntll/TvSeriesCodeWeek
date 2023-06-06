@@ -1,0 +1,28 @@
+/* -------  IMPORTS -------- */
+@import "./normalize.css";
+
+/* Font */
+@import "./fonts.css";
+/* Color */
+@import "./colors.css";
+
+/* Cross app Componets */
+@import "../Components/Header/header.css";
+@import "../Components/Menu/menu.css";
+@import "../Components/Card_info/Card_info.css";
+
+/* Pages */
+@import "../Pages/Home_page/homepage.css";
+
+/* --------- VARIABLES --------- */
+:root {
+  --border-r: 10px;
+
+  --anim-speed: 0.3s;
+  --padding: 16px;
+  --margin: 16px;
+}
+
+.margin-top {
+  margin-top: calc(var(--margin) * 2);
+}
