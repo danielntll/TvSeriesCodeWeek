@@ -43,6 +43,7 @@ export const renderVerticalCardSectionComponent = ({
   );
 
   homepage_section_carousel.append(renderSkeleton());
+
   loadData(homepage_section_carousel, sectionFetch, [
     keyTag,
     sectionIcon,

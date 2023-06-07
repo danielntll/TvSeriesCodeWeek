@@ -1,5 +1,5 @@
 .horizontal_card {
-  background-color: aqua;
+  background-color: var(--color-step-600);
   padding: var(--padding);
   border-radius: var(--border-r);
   width: calc(250px - var(--padding) * 2);

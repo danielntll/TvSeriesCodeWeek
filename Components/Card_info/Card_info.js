@@ -1,5 +1,8 @@
+import { getData } from "../../js/Utils/dbManager.js";
 import { createEl } from "../../js/Utils/DOM.js";
+import { writeLocal } from "../../js/Utils/localStoragemanage.js";
 import { GenresData } from "../Header/header.js";
+import { loaderSpinner } from "../LoaderSpinner/loaderSpinner.js";
 
 // UI ELEMENT ------------------
 export const ModalCardInfo = async (data = {}) => {
@@ -7,6 +10,12 @@ export const ModalCardInfo = async (data = {}) => {
   // --------
   const cardInfo = createEl("div", "cardInfo");
   cardInfo.id = "cardInfo";
+
+  cardInfo.setAttribute(
+    "style",
+    `  background-image: url("https://image.tmdb.org/t/p/original/${data.poster_path}");
+`
+  );
 
   const cardInfo_header = createEl("div", "cardInfo_header");
 
@@ -38,7 +47,7 @@ export const ModalCardInfo = async (data = {}) => {
   cardInfo_header_btn_img.src = "./Assets/icons8-forward-90-white.png";
   cardInfo_header_btn_img.alt = "open page btn";
   cardInfo_header_btn.addEventListener("click", () => {
-    goToTvSeriesPage(data.id);
+    goToTvSeriesPage(data);
   });
   cardInfo_header_btn.append(cardInfo_header_btn_img);
 
@@ -72,7 +81,7 @@ export const ModalCardInfo = async (data = {}) => {
   const cardInfo_content_rating_p2 = createEl("p");
   cardInfo_content_rating_p2.textContent = "|";
   const cardInfo_content_rating_p3 = createEl("p");
-  cardInfo_content_rating_p3.textContent = data.vote_count;
+  cardInfo_content_rating_p3.textContent = data.vote_count + " votes";
 
   cardInfo_content_rating.append(
     cardInfo_content_rating_img,
@@ -107,52 +116,106 @@ export const ModalCardInfo = async (data = {}) => {
   const cardInfo_description = createEl("div", "cardInfo_description");
   const cardInfo_description_p = createEl("p");
   cardInfo_description_p.textContent = data.overview;
+  cardInfo_description.append(cardInfo_description_p);
 
   const cardInfo_cta_container = createEl("div", "cardInfo_cta_container");
-  const cardInfo_cta_1 = createEl("div", "cardInfo_cta");
-  const cardInfo_cta_1_img = createEl("img");
-  cardInfo_cta_1_img.src = "./Assets/icons8-play-90-white.png";
-  cardInfo_cta_1_img.alt = "Web movie img";
-  const cardInfo_cta_1_p = createEl("p");
-  cardInfo_cta_1_p.textContent = "trailer";
-  cardInfo_cta_1.append(cardInfo_cta_1_img, cardInfo_cta_1_p);
+  const cardInfo_cta = createEl("div", "cardInfo_cta");
+  const cardInfo_cta_img = createEl("img");
+  cardInfo_cta_img.src = "./Assets/icons8-play-90-white.png";
+  cardInfo_cta_img.alt = "Web movie img";
+  const cardInfo_cta_p = createEl("p");
+  cardInfo_cta_p.textContent = "trailer";
+  cardInfo_cta.append(cardInfo_cta_img, cardInfo_cta_p);
 
-  cardInfo_cta_1.addEventListener("click", () => {
+  cardInfo_cta.addEventListener("click", () => {
     startVideoTrailer(data);
   });
 
-  const cardInfo_cta_2 = createEl("div", "cardInfo_cta");
-  const cardInfo_cta2_img = createEl("img");
-  cardInfo_cta2_img.src = "./Assets/icons8-website-90-white.png";
-  cardInfo_cta2_img.alt = "Web movie img";
-  const cardInfo_cta_2_p = createEl("p");
-  cardInfo_cta_2_p.textContent = "official website";
-  cardInfo_cta_2.append(cardInfo_cta2_img, cardInfo_cta_2_p);
+  cardInfo_cta_container.append(cardInfo_cta);
 
-  cardInfo_cta_2.addEventListener("click", () => {
-    openOfficialSite(data);
-  });
+  // CAST -------------
+  const cardInfo_cast = createEl("div", "cardInfo_cast");
 
-  cardInfo_cta_container.append(cardInfo_cta_1, cardInfo_cta_2);
+  for (let index = 0; index < 4; index++) {
+    cardInfo_cast.append(renderSkeleton());
+  }
+
+  loadData(cardInfo_cast, data.id);
 
   cardInfo_content.append(
     cardInfo_content_title,
     cardInfo_content_rating,
     hero_card_genre,
     cardInfo_description,
-    cardInfo_cta_container
+    cardInfo_cta_container,
+    cardInfo_cast
   );
   // APPEND-------------
-  cardInfo.append(cardInfo_header, cardInfo_content_img, cardInfo_content);
+  const cardInfo_content_wrapping = createEl(
+    "div",
+    "cardInfo_content_wrapping"
+  );
+  cardInfo_content_wrapping.append(cardInfo_content_img, cardInfo_content);
+  cardInfo.append(cardInfo_header, cardInfo_content_wrapping);
   // RETURN ----------
   root.append(cardInfo);
 };
 
+// SKELETON CARD -----------------
+const renderSkeleton = () => {
+  const skeleton = createEl("div", "cardInfo_cast_actor");
+
+  skeleton.append(loaderSpinner());
+  return skeleton;
+};
+
 // ASYNC FUNCTIONS -------------
+const loadData = async (fatherToAppend, id) => {
+  let { cast } = await getData.castAndCrew(id);
+  fatherToAppend.textContent = "";
+  console.log("dataCrew : ", cast);
+  cast.forEach((element) => {
+    fatherToAppend.append(renderCastCard(element));
+  });
+};
+
+// CAST CARD UI ------------------
+const renderCastCard = (data) => {
+  const cardInfo_cast_actor = createEl("div", "cardInfo_cast_actor");
+  const cardInfo_cast_actor_avatar = createEl(
+    "div",
+    "cardInfo_cast_actor_avatar"
+  );
+  const cardInfo_cast_actor_avatar_img = createEl("img");
+  cardInfo_cast_actor_avatar_img.src =
+    "https://image.tmdb.org/t/p/original/" + data.profile_path;
+  cardInfo_cast_actor_avatar_img.alt = data.name + " avatar img";
+
+  cardInfo_cast_actor_avatar.append(cardInfo_cast_actor_avatar_img);
+
+  const cardInfo_cast_actor_info = createEl("div", "cardInfo_cast_actor_info");
+  const cardInfo_cast_actor_info_p1 = createEl("p");
+  cardInfo_cast_actor_info_p1.textContent = data.name;
+  const cardInfo_cast_actor_info_p2 = createEl("p");
+  const cardInfo_cast_actor_info_p2_b = createEl("b");
+  cardInfo_cast_actor_info_p2_b.textContent = data.character;
+
+  cardInfo_cast_actor_info_p2.append(cardInfo_cast_actor_info_p2_b);
+
+  cardInfo_cast_actor_info.append(
+    cardInfo_cast_actor_info_p1,
+    cardInfo_cast_actor_info_p2
+  );
+
+  cardInfo_cast_actor.append(
+    cardInfo_cast_actor_avatar,
+    cardInfo_cast_actor_info
+  );
+  return cardInfo_cast_actor;
+};
 
 // FUNCTIONS COMPONENT ---------
 export const openCardInfo = async (data) => {
-  console.log(data);
   await ModalCardInfo(data);
   setTimeout(() => {
     let x = document.getElementById("cardInfo");
@@ -173,6 +236,8 @@ const startVideoTrailer = (data) => {
   console.log("startVideoTrailer");
 };
 
-export const goToTvSeriesPage = (id) => {
-  console.log("goToTvSeriesPage - id : ", id);
+export const goToTvSeriesPage = (data) => {
+  writeLocal.generalTvData(data);
+  console.log("goToTvSeriesPage - id : ", data.id);
+  window.location.href = "/tv-series.html?id=" + data.id;
 };

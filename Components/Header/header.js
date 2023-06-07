@@ -95,6 +95,11 @@ export const renderHeader = () => {
 };
 
 // --------------------- ASYNC LOADING ------------------
+export const getAllGeneres = async () => {
+  let { genres } = await getData.genres();
+  console.log(genres);
+  GenresData = genres;
+};
 const loadAllGenreList = async (fatherToAppend) => {
   let { genres } = await getData.genres();
   console.log(genres);

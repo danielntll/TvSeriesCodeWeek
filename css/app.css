@@ -12,9 +12,6 @@
 @import "../Components/Card_info/Card_info.css";
 @import "../Components/LoaderSpinner/loaderSpinner.css";
 
-/* Pages */
-@import "../Pages/Home_page/homepage.css";
-
 /* --------- VARIABLES --------- */
 :root {
   --border-r: 10px;
