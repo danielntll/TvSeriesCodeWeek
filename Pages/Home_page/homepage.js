@@ -15,6 +15,7 @@ export const renderPage = (
   // UI ELEMENTS --------------------
   // Header
   root.append(renderHeader());
+  // SECTION TOP RATED
   root.append(
     renderVerticalCardSectionComponent({
       sectionName: "Top Rated",
@@ -25,7 +26,6 @@ export const renderPage = (
     })
   );
 
-  // SECTION TOP RATED
   // SECTION POPULAR
   // SECTION ON THE AIR
   // SECTION ON THE AIRING TODAY
