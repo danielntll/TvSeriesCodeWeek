@@ -1,0 +1,33 @@
+.scroll_list_container {
+  height: 400px;
+  margin-top: var(--margin);
+  width: 100%;
+  opacity: 0;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+  transition: var(--anim-speed) ease-in-out;
+}
+
+.scroll_list_container_sx {
+  width: 50px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll_list_container_dx {
+  width: 50px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

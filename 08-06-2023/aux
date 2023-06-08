@@ -1,0 +1,99 @@
+<div class="main_content">
+  <div class="main_content_bg"></div>
+  <div class="main_content_info">
+    <div class="main_content_info_wrap">
+      <!--  -->
+
+      <!-- CREATED BY -->
+      <div class="main_content_info_created_by_container">
+        <p class="main_content_info_created_by_title">Created by:</p>
+        <div class="main_content_info_created_by">
+          <div class="main_content_info_created_by_content">
+            <div class="main_content_info_created_by_img">
+              <img
+                src="https://image.tmdb.org/t/p/original//z3E0DhBg1V1PZVEtS9vfFPzOWYB.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main_content_info_created_by_info">
+              <p>George Vincent</p>
+              <p>1967-02-10</p>
+              <p>
+                George Vincent \"Vince\" Gilligan, Jr. (born February 10, 1967)
+                is an American writer, producer, and director. He is known for
+                his television work, specifically as creator, head writer,
+                executive producer, and a director of Breaking Bad and its
+                spin-off Better Call Saul. He was a writer and producer for The
+                X-Files and was the co-creator of its spin-off The Lone Gunmen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCTION COMPANIES -->
+      <div class="main_content_info_production_company_wrap">
+        <p class="main_content_info_created_by_title">Production companies:</p>
+
+        <div class="main_content_info_production_company_container">
+          <div class="main_content_info_production_company">
+            <div class="main_content_info_production_company_img">
+              <img
+                src="https://image.tmdb.org/t/p/original//aCbASRcI1MI7DXjPbSW9Fcv9uGR.png"
+                alt=""
+              />
+            </div>
+            <div class="main_content_info_production_company_info">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+          <div class="main_content_info_production_company">
+            <div class="main_content_info_production_company_img">
+              <img
+                src="https://image.tmdb.org/t/p/original//aCbASRcI1MI7DXjPbSW9Fcv9uGR.png"
+                alt=""
+              />
+            </div>
+            <div class="main_content_info_production_company_info">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+          <div class="main_content_info_production_company">
+            <div class="main_content_info_production_company_img">
+              <img
+                src="https://image.tmdb.org/t/p/original//aCbASRcI1MI7DXjPbSW9Fcv9uGR.png"
+                alt=""
+              />
+            </div>
+            <div class="main_content_info_production_company_info">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+          <div class="main_content_info_production_company">
+            <div class="main_content_info_production_company_img">
+              <img
+                src="https://image.tmdb.org/t/p/original//aCbASRcI1MI7DXjPbSW9Fcv9uGR.png"
+                alt=""
+              />
+            </div>
+            <div class="main_content_info_production_company_info">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+          <div class="main_content_info_production_company">
+            <div class="main_content_info_production_company_img">
+              <img
+                src="https://image.tmdb.org/t/p/original//aCbASRcI1MI7DXjPbSW9Fcv9uGR.png"
+                alt=""
+              />
+            </div>
+            <div class="main_content_info_production_company_info">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+  </div>
+</div>

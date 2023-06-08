@@ -1,0 +1,123 @@
+.overlay_active {
+  background-color: rgba(var(--c-p-rgb), 0.1);
+}
+.overlay_active img {
+  background-color: transparent;
+  filter: var(--filter-p);
+}
+.overlay_active p {
+  color: var(--c-p);
+}
+
+/* ------------- */
+.menu_hamburger {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.menu_hamburger img {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  filter: var(--filter-s);
+}
+
+/* ------------- */
+.overlay_menu {
+  height: 100vh;
+  width: 0vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  transition: var(--anim-speed);
+}
+.overlay_menu_header {
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding);
+  align-items: center;
+  justify-content: space-between;
+}
+.overlay_menu_header_avatar {
+  display: flex;
+  padding: var(--padding);
+  flex-direction: row;
+  align-items: center;
+  border-radius: var(--border-r);
+  transition: all var(--anim-speed) ease-in-out;
+  cursor: pointer;
+}
+.overlay_menu_header_avatar img {
+  background-color: transparent;
+}
+.overlay_menu_header_avatar:hover {
+  background-color: var(--color-step-200);
+}
+.overlay_menu_header_avatar p {
+  font-size: 24px;
+  margin: 0;
+  margin-left: var(--margin);
+  background-color: transparent;
+}
+.overlay_content {
+  position: relative;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+}
+.overlay_content hr {
+  margin: 0;
+  border: 1px solid var(--color-step-500);
+  border-radius: 50px 50px 50px 50px;
+  margin-top: var(--margin);
+  margin-bottom: var(--margin);
+}
+
+.overlay_content_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding);
+  cursor: pointer;
+  border-radius: var(--border-r);
+  transition: all var(--anim-speed) ease-in-out;
+}
+.overlay_content_btn img {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+}
+.overlay_content_btn p {
+  margin: 0;
+  font-size: 18px;
+  margin-left: var(--margin);
+  background-color: transparent;
+}
+.overlay_content_btn:hover {
+  background-color: var(--color-step-200);
+  border-radius: var(--border-r);
+}
+
+.closebtn {
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  transition: all var(--anim-speed) ease-in-out;
+  border-radius: var(--border-r);
+  align-items: center;
+  justify-content: center;
+}
+.closebtn:hover {
+  background-color: var(--color-step-200);
+}
+
+.closebtn img {
+  width: 28px;
+  background-color: transparent;
+}

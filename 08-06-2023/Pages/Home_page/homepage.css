@@ -1,0 +1,75 @@
+/* IMPORT */
+@import "./components/hero_comp/hero_comp.css";
+@import "./components/popular_comp/popular_comp.css";
+@import "./components/horizontal_card/horizontal_card.css";
+
+/* ----------- */
+.homepage_section {
+  margin-top: var(--margin);
+  padding: 0 var(--padding);
+  border-radius: var(--border-r);
+}
+.homepage_section_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--margin);
+}
+.homepage_section_title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--c-p);
+}
+.homepage_section_header_cta {
+  /* width: 42px; */
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.homepage_section_header_cta img {
+  width: 32px;
+}
+
+.homepage_section_carousel {
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  display: -webkit-inline-box;
+  width: 100%;
+}
+
+.homepage_section_carousel::-webkit-scrollbar {
+  /* display: none; */
+}
+
+.homepage_section_carousel {
+  /* -ms-overflow-style: none; IE and Edge */
+  /* scrollbar-width: none; Firefox */
+}
+
+/* --------------------------------------------------- */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

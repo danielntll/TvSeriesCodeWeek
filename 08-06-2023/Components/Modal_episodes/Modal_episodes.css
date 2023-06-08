@@ -1,0 +1,33 @@
+.modaleEpisode_content_air_date_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.episodeCard_img {
+  width: 100%;
+  height: 150px;
+}
+.episodeCard_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-r) var(--border-r) 0 0;
+}
+
+.modaleEpisode_content_wrapping {
+  width: calc(100% - var(--padding) * 2);
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.modaleEpisode_content_title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}

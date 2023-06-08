@@ -1,0 +1,39 @@
+.tv_header_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.tv_header_sx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tv_header_back_btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tv_header_back_btn img {
+  width: 32px;
+  height: 32px;
+}
+.tv_header_title p {
+  margin: 0;
+  margin-left: var(--margin);
+}
+
+.tv_header_share_btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tv_header_share_btn img {
+  width: 32px;
+  height: 32px;
+}
