@@ -161,7 +161,7 @@ const renderCard = (data, index, options) => {
     const hero_card_genre_title = createEl("div", "hero_card_genre_title");
     const hero_card_genre_title_p = createEl("p");
     const aux = GenresData.find((element) => element.id === elem);
-    hero_card_genre_title_p.textContent = aux.name;
+    hero_card_genre_title_p.textContent = aux?.name;
     hero_card_genre_title.append(hero_card_genre_title_p);
 
     const hero_card_genre_title_separator = createEl(
