@@ -229,7 +229,7 @@ export const openCardInfo = async (data) => {
   await ModalCardInfo(data);
   setTimeout(() => {
     let x = document.getElementById("cardInfo");
-    x.style.height = "80vh";
+    x.style.height = "90vh";
     x.style.visibility = "visible";
   }, 100);
 };
