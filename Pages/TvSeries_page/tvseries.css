@@ -9,7 +9,7 @@
   background-size: cover;
 }
 .main_content_bg {
-  height: 85vh;
+  height: 75vh;
 }
 
 .main_content_info {
@@ -81,6 +81,7 @@
 
 /* -------------  SEASONS ----------- */
 .main_content_info_seasons_container {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,7 +198,7 @@
 .main_content_info_seasons_vertical_details_cta img {
   width: 26px;
   height: 26px;
-  margin-right: 5px;
+  margin-left: 5px;
   filter: var(--filter-bg);
 }
 
@@ -291,4 +292,41 @@
   margin-left: 5px;
   margin-right: 5px;
   color: var(--color-step-600);
+}
+
+.cardInfo_cast_container {
+  position: relative;
+}
+/* --------------------------------------------------- */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .main_content_info_wrap {
+    width: 70%;
+    margin: auto;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main_content_info_wrap {
+    width: 50%;
+    margin: auto;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main_content_info_wrap {
+    width: 50%;
+    margin: auto;
+  }
 }

@@ -3,11 +3,14 @@ import { createEl } from "../../js/Utils/DOM.js";
 import { writeLocal } from "../../js/Utils/localStoragemanage.js";
 import { GenresData } from "../Header/header.js";
 import { loaderSpinner } from "../LoaderSpinner/loaderSpinner.js";
+import { Scroll_list } from "../Scroll_list/Scroll_list.js";
+import { displayVideoTrailer } from "../VideoOverlay/VideoOvelay.js";
 
 // UI ELEMENT ------------------
 export const ModalCardInfo = async (data = {}) => {
   const root = document.getElementById("root");
   // --------
+
   const cardInfo = createEl("div", "cardInfo");
   cardInfo.id = "cardInfo";
 
@@ -134,12 +137,15 @@ export const ModalCardInfo = async (data = {}) => {
   cardInfo_cta_container.append(cardInfo_cta);
 
   // CAST -------------
+  const cardInfo_cast_wrapper = createEl("div", "cardInfo_cast_wrapper");
+  cardInfo_cast_wrapper.id = "cardInfo_cast_wrapper";
   const cardInfo_cast = createEl("div", "cardInfo_cast");
 
   for (let index = 0; index < 4; index++) {
     cardInfo_cast.append(renderSkeleton());
   }
 
+  cardInfo_cast_wrapper.append(cardInfo_cast);
   loadData(cardInfo_cast, data.id);
 
   cardInfo_content.append(
@@ -148,7 +154,7 @@ export const ModalCardInfo = async (data = {}) => {
     hero_card_genre,
     cardInfo_description,
     cardInfo_cta_container,
-    cardInfo_cast
+    cardInfo_cast_wrapper
   );
   // APPEND-------------
   const cardInfo_content_wrapping = createEl(
@@ -172,11 +178,14 @@ const renderSkeleton = () => {
 // ASYNC FUNCTIONS -------------
 const loadData = async (fatherToAppend, id) => {
   let { cast } = await getData.castAndCrew(id);
-  fatherToAppend.textContent = "";
-  console.log("dataCrew : ", cast);
-  cast.forEach((element) => {
-    fatherToAppend.append(renderCastCard(element));
-  });
+  setTimeout(() => {
+    fatherToAppend.textContent = "";
+    console.log("dataCrew : ", cast);
+    cast.forEach((element) => {
+      fatherToAppend.append(renderCastCard(element));
+    });
+    Scroll_list("cardInfo_cast_wrapper", true, true);
+  }, 1000);
 };
 
 // CAST CARD UI ------------------
@@ -215,6 +224,7 @@ const renderCastCard = (data) => {
 };
 
 // FUNCTIONS COMPONENT ---------
+
 export const openCardInfo = async (data) => {
   await ModalCardInfo(data);
   setTimeout(() => {
@@ -234,10 +244,11 @@ export const closeCardInfo = (cardInfo) => {
 
 const startVideoTrailer = (data) => {
   console.log("startVideoTrailer");
+  displayVideoTrailer(data.url_trailer);
 };
 
 export const goToTvSeriesPage = (data) => {
   writeLocal.generalTvData(data);
   console.log("goToTvSeriesPage - id : ", data.id);
-  window.location.href = "/tv-series.html?id=" + data.id;
+  window.location.href = "/tv-series.html?id=" + data.id + "&type=ref";
 };

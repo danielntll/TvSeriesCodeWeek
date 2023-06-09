@@ -14,6 +14,7 @@ export const getData = {
       options
     );
     let data = await res.json();
+    console.log("getData - topRated(): ->", data);
     return data;
   },
   popular: async (pageNumber = 1) => {
@@ -27,7 +28,7 @@ export const getData = {
       options
     );
     let data = await res.json();
-    console.log("POPULAR : ", data);
+    console.log("getData - popular(): ->", data);
     return data;
   },
   onTheAir: async (pageNumber = 1) => {
@@ -41,7 +42,7 @@ export const getData = {
       options
     );
     let data = await res.json();
-    console.log("onTheAir : ", data);
+    console.log("getData - onTheAir(): ->", data);
     return data;
   },
   airingToday: async (pageNumber = 1) => {
@@ -55,6 +56,7 @@ export const getData = {
       options
     );
     let data = await res.json();
+    console.log("getData - airingToday(): ->", data);
     return data;
   },
   genres: async () => {
@@ -68,6 +70,8 @@ export const getData = {
       options
     );
     let data = await res.json();
+    console.log("getData - genres(): ->", data);
+
     return data;
   },
   castAndCrew: async (idSeries) => {
@@ -81,6 +85,7 @@ export const getData = {
     );
     let data = await res.json();
     writeLocal.castAndCrew(data);
+    console.log("getData - castAndCrew(): ->", data);
     return data;
   },
   person: async (idPerson) => {
@@ -94,6 +99,59 @@ export const getData = {
     );
     let data = await res.json();
     writeLocal.castAndCrew(data);
+    console.log("getData - person(): ->", data);
+    return data;
+  },
+  seriesDetails: async (idSeries) => {
+    const options = {
+      method: "GET",
+      headers: { accept: "application/json" },
+    };
+    let res = await fetch(
+      `https://api.themoviedb.org/3/tv/${idSeries}?api_key=${API_KEY}`,
+      options
+    );
+    let data = await res.json();
+    console.log("getData - seriesDetails(): ->", data);
+    return data;
+  },
+  seasonDetails: async (idSeries, seasonNumber) => {
+    const options = {
+      method: "GET",
+      headers: { accept: "application/json" },
+    };
+    let res = await fetch(
+      `https://api.themoviedb.org/3/tv/${idSeries}/season/${seasonNumber}?api_key=${API_KEY}`,
+      options
+    );
+    let data = await res.json();
+    console.log("getData - seasonDetails(): ->", data);
+    return data;
+  },
+  tvSeriesByGenre: async (genreId, pageNumber) => {
+    const options = {
+      method: "GET",
+      headers: { accept: "application/json" },
+    };
+    let res = await fetch(
+      `https://api.themoviedb.org/3//discover/tv?api_key=${API_KEY}&with_genres=${genreId}&page=${pageNumber}`,
+      options
+    );
+    let data = await res.json();
+    console.log("getData - tvSeriesByGenre(): ->", data);
+    return data;
+  },
+  searchTvSeries: async (searchInput) => {
+    const options = {
+      method: "GET",
+      headers: { accept: "application/json" },
+    };
+    let res = await fetch(
+      `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${searchInput}`,
+      options
+    );
+    let data = await res.json();
+    console.log("getData - searchTvSeries(): ->", data);
     return data;
   },
 };

@@ -57,6 +57,7 @@ export const renderHomePage = (
       sectionFetch: () => getData.airingToday(),
     })
   );
+
   // RETURN ---------------------------
   return callback();
 };

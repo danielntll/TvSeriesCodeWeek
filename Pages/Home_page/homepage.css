@@ -1,10 +1,10 @@
 /* IMPORT */
 @import "./components/hero_comp/hero_comp.css";
-@import "./components/popular_comp/popular_comp.css";
 @import "./components/horizontal_card/horizontal_card.css";
 
 /* ----------- */
 .homepage_section {
+  overflow: hidden;
   margin-top: var(--margin);
   padding: 0 var(--padding);
   border-radius: var(--border-r);
@@ -43,36 +43,10 @@
   width: 100%;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 4px;
-  height: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  border: 1px solid var(--c-p);
-  border-radius: 10px;
-  margin: 50px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: var(--c-p);
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--c-s);
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
 .homepage_section_carousel::-webkit-scrollbar {
   /* display: none; */
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .homepage_section_carousel {
   /* -ms-overflow-style: none; IE and Edge */
   /* scrollbar-width: none; Firefox */

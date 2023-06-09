@@ -40,7 +40,7 @@
   flex-direction: row;
   padding: var(--padding);
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .overlay_menu_header_avatar {
   display: flex;

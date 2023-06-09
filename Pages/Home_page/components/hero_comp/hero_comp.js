@@ -3,6 +3,8 @@
 import { openCardInfo } from "../../../../Components/Card_info/Card_info.js";
 import { GenresData } from "../../../../Components/Header/header.js";
 import { loaderSpinner } from "../../../../Components/LoaderSpinner/loaderSpinner.js";
+import { Scroll_list } from "../../../../Components/Scroll_list/Scroll_list.js";
+import { displayVideoTrailer } from "../../../../Components/VideoOverlay/VideoOvelay.js";
 import { createEl } from "../../../../js/Utils/DOM.js";
 
 //UI ELEMENT ------------------
@@ -27,6 +29,10 @@ export const renderVerticalCardSectionComponent = ({
   );
   homepage_section_header_cta.textContent = "Explore all";
 
+  homepage_section_header_cta.addEventListener("click", () => {
+    goToExploreAll(sectionFetch);
+  });
+
   const homepage_section_header_cta_img = createEl("img");
   homepage_section_header_cta_img.src = "./Assets/icons8-forward-90-white.png";
   homepage_section_header_cta_img.alt = "Forward arrow icon";
@@ -37,6 +43,8 @@ export const renderVerticalCardSectionComponent = ({
   );
 
   //   CAROUSEL -------
+  const homepage_section_carousel_wrap = createEl("div");
+  homepage_section_carousel_wrap.id = "homepage_section_carousel_header";
   const homepage_section_carousel = createEl(
     "div",
     "homepage_section_carousel"
@@ -50,8 +58,12 @@ export const renderVerticalCardSectionComponent = ({
     sectionPage,
   ]);
 
+  homepage_section_carousel_wrap.append(homepage_section_carousel);
   // APPEND ---------
-  homepage_section.append(homepage_section_header, homepage_section_carousel);
+  homepage_section.append(
+    homepage_section_header,
+    homepage_section_carousel_wrap
+  );
   // RETURN----------
   return homepage_section;
 };
@@ -214,12 +226,16 @@ const renderCard = (data, index, options) => {
 const loadData = async (fatherToAppend, callback, options) => {
   let { results } = await callback();
   fatherToAppend.textContent = "";
-  console.log(results);
   results.forEach((element, index) => {
     fatherToAppend.append(renderCard(element, index + 1, options));
   });
+  Scroll_list("homepage_section_carousel_header", true, true);
 };
 // FUNCTIONS ------------------
 const startVideoTrailer = (data) => {
-  console.log("startVideoTrailer");
+  displayVideoTrailer(data.url_trailer);
+};
+const goToExploreAll = (callback) => {
+  let aux = callback.toString();
+  window.location.href = "/category.html?explore=" + aux.split(".")[1];
 };

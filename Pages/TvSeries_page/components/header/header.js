@@ -20,8 +20,18 @@ export const renderHeaderTvSeries = (previewData) => {
   tv_header_title_p.textContent = previewData.name;
   // ---
   const tv_header_share_btn = createEl("div", "tv_header_share_btn");
-  tv_header_share_btn.addEventListener("click", () => {
-    handleShareTvShow(previewData);
+  tv_header_share_btn.addEventListener("click", async () => {
+    const shareData = {
+      title: previewData.name + " Tv Series",
+      text: "Have you ever heard of it?",
+      url: window.location.hostname + "/tv-series.html?id=" + previewData.id,
+    };
+    try {
+      await navigator.share(shareData);
+      console.log("MDN shared successfully");
+    } catch (err) {
+      alert(`You need an HTTPS connection : Error: ${err}`);
+    }
   });
   const tv_header_share_btn_img = createEl("img");
 
@@ -44,6 +54,6 @@ const handleGoBack = () => {
   console.log("handleGoBack");
   history.back();
 };
-const handleShareTvShow = (previewData) => {
+const handleShareTvShow = async (previewData) => {
   console.log("handleShareTvShow");
 };
