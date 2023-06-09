@@ -1,0 +1,332 @@
+/* IMPORT */
+@import "./components/header/header.css";
+
+/* ----------- */
+#root {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main_content_bg {
+  height: 75vh;
+}
+
+.main_content_info {
+  min-height: 100vh;
+  bottom: -100vh;
+  padding: var(--padding);
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px -15px 59px 51px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.main_content_info_title h1 {
+  margin: 0;
+}
+.main_content_info_rating {
+  margin-top: var(--margin);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main_content_info_rating img {
+  width: 32px;
+  height: 32px;
+  filter: var(--filter-p);
+}
+.main_content_info_rating_values {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: var(--margin);
+}
+.main_content_info_rating_values p {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 800;
+}
+.main_content_info_rating_values p:nth-child(2) {
+  margin-left: var(--margin);
+  font-weight: 100;
+}
+.main_content_info_rating_values p:nth-child(3) {
+  margin-left: var(--margin);
+  font-weight: 100;
+}
+.main_content_info_rating_values p:nth-child(4) {
+  margin-left: var(--margin);
+  font-weight: 100;
+}
+
+.main_content_info_genre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: var(--margin);
+}
+.main_content_info_genre_title p {
+  margin: 0;
+  color: var(--color-step-600);
+  cursor: pointer;
+}
+.main_content_info_genre_title_separator p {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: var(--color-step-600);
+}
+.main_content_info_description {
+  margin: var(--margin) 0;
+}
+
+/* -------------  SEASONS ----------- */
+.main_content_info_seasons_container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_content_info_seasons_container_content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main_content_info_seasons_container_info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin: var(--margin);
+  justify-content: space-between;
+}
+.main_content_info_seasons_container_title {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+.main_content_info_seasons_container_subtitle {
+  margin: 5px;
+  color: var(--color-step-500);
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: var(--border-r);
+}
+.main_content_info_seasons_vertical {
+  background: rgba(109, 109, 109, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  border-radius: var(--border-r);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.main_content_info_seasons_vertical_img {
+  width: 60%;
+  height: 100%;
+  border-radius: var(--border-r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_content_info_seasons_vertical_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-r);
+}
+.main_content_info_seasons_vertical_details {
+  padding: var(--padding);
+  width: 40%;
+}
+.main_content_info_seasons_vertical_details_season {
+  font-size: 14px;
+
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--color-step-800);
+}
+.main_content_info_seasons_vertical_details_air_date {
+  font-size: 14px;
+  margin: 0px;
+  text-transform: uppercase;
+}
+.main_content_info_seasons_vertical_details_name {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+.main_content_info_seasons_vertical_details_episodes {
+  font-size: 20px;
+}
+.main_content_info_seasons_vertical_details_overview {
+  color: var(--color-step-800);
+  font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.main_content_info_seasons_vertical_details_cta {
+  width: 100%;
+  height: 35px;
+  background-color: var(--c-p);
+  border-radius: var(--border-r);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--anim-speed) ease-in-out;
+}
+.main_content_info_seasons_vertical_details_cta:hover {
+  background-color: var(--c-s);
+}
+.main_content_info_seasons_vertical_details_cta p {
+  color: var(--background-color);
+}
+.main_content_info_seasons_vertical_details_cta img {
+  width: 26px;
+  height: 26px;
+  margin-left: 5px;
+  filter: var(--filter-bg);
+}
+
+/* CREATED BY */
+.main_content_info_created_by {
+  margin-top: var(--margin);
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding) 0;
+}
+.main_content_info_created_by_title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: calc(var(--margin) * 2);
+}
+.main_content_info_created_by_content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.main_content_info_created_by_img {
+  width: 30%;
+}
+.main_content_info_created_by_img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-r);
+}
+.main_content_info_created_by_info {
+  padding: 0 var(--padding);
+  width: 70%;
+}
+.main_content_info_created_by_info p:nth-child(1) {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+.main_content_info_created_by_info p:nth-child(2) {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+/* PRODUCTION COMPANY */
+.main_content_info_production_company_wrap {
+}
+.main_content_info_production_company_container {
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  display: -webkit-inline-box;
+  gap: 10px;
+  width: 100%;
+}
+.main_content_info_production_company {
+  padding: var(--padding);
+  width: calc(130px - var(--padding) * 2);
+  border-radius: var(--border-r);
+  background: rgba(109, 109, 109, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all var(--anim-speed) ease-in-out;
+}
+.main_content_info_production_company_img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+.main_content_info_production_company_img img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.main_content_info_production_company_info {
+  text-align: center;
+  word-wrap: break-word;
+  white-space: break-spaces;
+}
+.main_content_info_production_company_info p {
+  word-wrap: break-word;
+  width: 100px;
+  margin: 0;
+}
+
+.main_content_info_genre_title_separator {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: var(--color-step-600);
+}
+
+.cardInfo_cast_container {
+  position: relative;
+}
+/* --------------------------------------------------- */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .main_content_info_wrap {
+    width: 70%;
+    margin: auto;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main_content_info_wrap {
+    width: 50%;
+    margin: auto;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main_content_info_wrap {
+    width: 50%;
+    margin: auto;
+  }
+}
