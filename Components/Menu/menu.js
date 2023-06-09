@@ -1,10 +1,12 @@
+import { BASE_PATH } from "../../js/app";
+
 export const menuLinks = [
   {
     title: "Home",
     imgUrl: "./Assets/icons8-dashboard-90-white.png",
     alt: "Home icon",
     onclick: () => {
-      window.location.href = "index.html";
+      window.location.href = BASE_PATH + "index.html";
     },
   },
   {
@@ -12,7 +14,7 @@ export const menuLinks = [
     imgUrl: "./Assets/icons8-trophy-90-white.png",
     alt: "Top rated icon",
     onclick: () => {
-      window.location.href = "/category.html?explore=topRated()";
+      window.location.href = BASE_PATH + "/category.html?explore=topRated()";
     },
   },
   {

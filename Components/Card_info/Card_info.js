@@ -1,3 +1,4 @@
+import { BASE_PATH } from "../../js/app.js";
 import { getData } from "../../js/Utils/dbManager.js";
 import { createEl } from "../../js/Utils/DOM.js";
 import { writeLocal } from "../../js/Utils/localStoragemanage.js";
@@ -250,5 +251,7 @@ const startVideoTrailer = (data) => {
 export const goToTvSeriesPage = (data) => {
   writeLocal.generalTvData(data);
   console.log("goToTvSeriesPage - id : ", data.id);
-  window.location.href = "/tv-series.html?id=" + data.id + "&type=ref";
+
+  window.location.href =
+    BASE_PATH + "/tv-series.html?id=" + data.id + "&type=ref";
 };
