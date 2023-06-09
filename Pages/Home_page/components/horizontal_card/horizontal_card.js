@@ -4,6 +4,7 @@ import { openCardInfo } from "../../../../Components/Card_info/Card_info.js";
 import { loaderSpinner } from "../../../../Components/LoaderSpinner/loaderSpinner.js";
 import { Scroll_list } from "../../../../Components/Scroll_list/Scroll_list.js";
 import { displayVideoTrailer } from "../../../../Components/VideoOverlay/VideoOvelay.js";
+import { BASE_PATH } from "../../../../js/app.js";
 import { createEl } from "../../../../js/Utils/DOM.js";
 
 //UI ELEMENT ------------------
@@ -208,5 +209,6 @@ const startVideoTrailer = (data) => {
 
 const goToExploreAll = (callback) => {
   let aux = callback.toString();
-  window.location.href = "/category.html?explore=" + aux.split(".")[1];
+  window.location.href =
+    BASE_PATH + "/category.html?explore=" + aux.split(".")[1];
 };

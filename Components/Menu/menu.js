@@ -1,3 +1,5 @@
+import { BASE_PATH } from "../../js/app.js";
+
 export const menuLinks = [
   {
     title: "Home",
@@ -12,7 +14,7 @@ export const menuLinks = [
     imgUrl: "./Assets/icons8-trophy-90-white.png",
     alt: "Top rated icon",
     onclick: () => {
-      window.location.href = "/category.html?explore=topRated()";
+      window.location.href = BASE_PATH + "/category.html?explore=topRated()";
     },
   },
   {
@@ -20,7 +22,7 @@ export const menuLinks = [
     imgUrl: "./Assets/icons8-prize-90-white.png",
     alt: "Popular icon",
     onclick: () => {
-      window.location.href = "/category.html?explore=popular()";
+      window.location.href = BASE_PATH + "/category.html?explore=popular()";
     },
   },
   {
@@ -28,7 +30,7 @@ export const menuLinks = [
     imgUrl: "./Assets/icons8-live-video-on-90-white.png",
     alt: "Popular icon",
     onclick: () => {
-      window.location.href = "/category.html?explore=onTheAir()";
+      window.location.href = BASE_PATH + "/category.html?explore=onTheAir()";
     },
   },
   {
@@ -36,7 +38,7 @@ export const menuLinks = [
     imgUrl: "./Assets/icons8-collegato-90-white.png",
     alt: "Popular icon",
     onclick: () => {
-      window.location.href = "/category.html?explore=airingToday()";
+      window.location.href = BASE_PATH + "/category.html?explore=airingToday()";
     },
   },
 ];
