@@ -3,7 +3,6 @@ import { createEl, getEl } from "../../js/Utils/DOM.js";
 import { menuLinks } from "../Menu/menu.js";
 import { loaderSpinner } from "../LoaderSpinner/loaderSpinner.js";
 import { openCardInfo } from "../Card_info/Card_info.js";
-import { BASE_PATH } from "../../js/app.js";
 
 // UI ELEMENT --------------------------
 export let GenresData = [];
@@ -149,7 +148,7 @@ const loadAllGenreList = async (fatherToAppend, callback) => {
     overlay_content_btn_p.textContent = element.name;
 
     overlay_content_btn.addEventListener("click", () => {
-      window.location.href = BASE_PATH + "category.html?id=" + element.id;
+      window.location.href = "category.html?id=" + element.id;
     });
 
     overlay_content_btn.append(overlay_content_btn_p);
