@@ -1,7 +1,6 @@
 import { renderHomePage } from "../Pages/Home_page/homepage.js";
 
 // -------------- INITIALIZZATION --------------------
-export const BASE_PATH = "";
 
 switch (window.location.pathname.split(".")[0]) {
   case "/index":
@@ -14,3 +13,6 @@ switch (window.location.pathname.split(".")[0]) {
     renderHomePage();
     break;
 }
+
+export const BASE_PATH = "";
+console.log("INIT");
